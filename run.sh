@@ -25,7 +25,6 @@ if [ -z "$FILE_TO_WATCH" ]; then
 fi
 
 compile_and_run() {
-  clang-format -i "$FILE_TO_WATCH"
   clear
   echo "Compiling..."
   COMPILATION_START=$(date +%s.%N)
@@ -37,6 +36,7 @@ compile_and_run() {
     return 0;
   fi
   COMPILATION_END=$(date +%s.%N)
+  clang-format -i "$FILE_TO_WATCH"
   COMPILATION_TIME=$(echo "scale=3; ($COMPILATION_END - $COMPILATION_START) / 1" | bc -l)
   echo "Compilation time: ${COMPILATION_TIME}s"
   echo ""
