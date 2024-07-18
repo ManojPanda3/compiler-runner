@@ -30,9 +30,11 @@ compile_and_run() {
   echo "Compiling..."
   COMPILATION_START=$(date +%s.%N)
   if ! g++ -o "${FILE_TO_WATCH%.cpp}.o" "$FILE_TO_WATCH"; then
+    INITIAL_HASH=$(md5sum "$FILE_TO_WATCH" | cut -d' ' -f1)
     if $AUTOFIX; then
       clang-tidy -fix-errors "$FILE_TO_WATCH" 2>&1 &
     fi
+    return 0;
   fi
   COMPILATION_END=$(date +%s.%N)
   COMPILATION_TIME=$(echo "scale=3; ($COMPILATION_END - $COMPILATION_START) / 1" | bc -l)
