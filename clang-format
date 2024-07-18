@@ -1,6 +1,7 @@
 #.clang-format
-
+# for formating your code
 # BasedOnStyle: Google
+# Change Acd to your need
 
 IndentWidth: 2
 TabWidth: 2
@@ -25,9 +26,6 @@ MaxEmptyLinesToKeep: 0
 
 # Remove spaces before trailing comments
 SpacesBeforeTrailingComments: 0
-
-# Use spaces instead of tabs
-UseTab: Never
 
 # Keep namespace indentation consistent
 NamespaceIndentation: Inner
