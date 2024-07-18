@@ -1,0 +1,42 @@
+#.clang-format
+
+# BasedOnStyle: Google
+
+IndentWidth: 2
+TabWidth: 2
+BreakBeforeBraces: Linux
+ColumnLimit: 80
+IndentCaseLabels: true
+AccessModifierOffset: -2
+
+# Remove unnecessary spaces
+SpaceBeforeParens: false
+SpaceAfterTemplateKeyword: false
+SpaceBeforeCtorInitializerColon: false
+SpaceBeforeInheritanceColon: false
+SpaceBeforeAssignmentOperators: false
+
+# Allow short functions to be inlined
+AllowShortFunctionsOnASingleLine: Inline
+
+# Remove empty lines between functions
+EmptyLineBeforeAccessModifier: Never
+MaxEmptyLinesToKeep: 0
+
+# Remove spaces before trailing comments
+SpacesBeforeTrailingComments: 0
+
+# Use spaces instead of tabs
+UseTab: Never
+
+# Keep namespace indentation consistent
+NamespaceIndentation: Inner
+
+# Sort include statements
+SortIncludes: true
+
+# Use C++11 style for auto variables
+Cpp11BracedListStyle: true
+
+# Use C++11 style for range-based for loops
+ForEachMacros: ["Q_FOREACH", "Q_FOR", "foreach", "Q_WHILE", "while"]
